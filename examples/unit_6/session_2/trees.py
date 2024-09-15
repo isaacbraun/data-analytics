@@ -40,11 +40,14 @@ def splitDataSet(dataSet, axis, value):
     
 def chooseBestFeatureToSplit(dataSet):
     numFeatures = len(dataSet[0]) - 1      #the last column is used for the labels
+    print("features", numFeatures)
     baseEntropy = calcShannonEnt(dataSet)
     bestInfoGain = 0.0; bestFeature = -1
     for i in range(numFeatures):        #iterate over all the features
         featList = [example[i] for example in dataSet]#create a list of all the examples of this feature
+        print("featList", i, featList)
         uniqueVals = set(featList)       #get a set of unique values
+        print("unique", uniqueVals)
         newEntropy = 0.0
         for value in uniqueVals:
             subDataSet = splitDataSet(dataSet, i, value)
