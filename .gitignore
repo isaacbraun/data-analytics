@@ -2,3 +2,5 @@
 .DS_Store
 __pycache__
 datasets/eggs/
+datasets/isic/
+*.keras
