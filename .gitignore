@@ -3,4 +3,5 @@
 __pycache__
 datasets/eggs/
 datasets/isic/
+datasets/tumors/
 *.keras
